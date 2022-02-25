@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Validator,Redirect,Response,File;
 use DB;
-use Exception;
+//use Exception;
 
 class UsuariosCtr extends Controller
 {

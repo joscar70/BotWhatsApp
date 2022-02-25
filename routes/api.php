@@ -14,6 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group([
+    'prefix' => 'auth'
+], function () {
+    Route::get('getAutenticacion', [App\Http\Controllers\UsuariosCtr::class, 'login'])->name('login');
+    
+    Route::group([
+      'middleware' => 'auth:api'
+    ], function() {
+        
+        Route::post('getLogout', [App\Http\Controllers\UsuariosCtr::class, 'logout'])->name('logout');
+        Route::post('sendMensaje', [App\Http\Controllers\EnviarMensajeCtr::class, 'sendMensaje'])->name('sendMensaje');
+
+
+        
+    });
+});
+
+Route::post('jCwhatsAppBot', [App\Http\Controllers\ApiWhatsAppBotCtr::class,'__construct']);

@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
-        @include('layouts.ModulosApp.cdnCss')
-        @include('layouts.ModulosApp.cdnJs')
-        
-    </head>
-     @if (Route::has('login'))
-        @auth
-            <body class="hold-transition sidebar-mini sidebar-collapse layout-fixed layout-navbar-fixed layout-footer-fixed texto" onload="" style="background-color: gray;font-size: ">
-               
-                <!-- Site wrapper -->
+@extends('layouts.app')
 
-                <div class="wrapper">
-                    
-                    {{-- @if ( auth()->user()->rol=='ADMIN' ) --}}
-                    
-                        @include('layouts.ModulosApp.header')
-                        @include('layouts.ModulosApp.sideBar')
-                        @yield('content')
-                        
-                       
-                        {{-- @yield('content') --}}
-                       @include('layouts.ModulosApp.footer')
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
                 </div>
-            </body>
-        @else
-            @include('auth.login')
-        @endauth
-     @endif
-   
-</html>
-
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
