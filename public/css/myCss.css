@@ -1,0 +1,126 @@
+
+/** Css Label **/
+label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: 500;
+    color: #17a2b8;
+}
+
+/** Css Body **/
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+/** Show Pass**/
+.verPassw {
+      position: absolute; !important;
+      margin-top: -30px !important;
+      right: 0;
+      color: lightgray;
+    }
+
+/** Color Icono Botones de Accions **/
+i.colorIcoEdit {
+    color: gray !important;
+}
+
+i.colorIcoDelete {
+    color: gray !important;
+}
+
+i.colorIcoDelete:hover{
+    color: #d81111a8 !important;
+}
+
+i.colorIcoEdit:hover{
+        color: #20c23696 !important;
+    }
+/** Barra de Botones **/
+.botonBar {
+    margin-top: 60px;
+    padding: 0px;
+    background-color: #17a2b8
+}
+
+.info-color {
+    background-color: #17a2b8!important;
+}
+
+/** Configuracion para la responsividade en Mobiles y PC **/
+
+@media  screen and (min-width: 860px) {
+      
+   .content-wrapper>.content {
+        padding: 2rem 0.5rem;
+    }
+
+    .card {
+        margin-bottom: -5rem;
+    }
+        
+}
+
+@media  screen and (max-width: 768px) {
+  /* For mobile phones: */
+    [id="navBar"] {
+        position: absolute !important;
+        margin-top: 10px !important;
+        z-index: 0 !important;
+    }
+}
+
+@media  screen and (max-width: 480px) {
+  /* For mobile phones: */
+    .content-wrapper>.content {
+        padding: 5rem 0.5rem;
+    }
+    .card {
+        margin-bottom: 0rem;
+    }
+}
+
+/** Configuracoin Tablas Heading and column  **/
+
+.table td {
+        padding: .10rem !important;
+        padding-left: .4rem !important;
+        vertical-align: middle;
+        border-top: 1px solid #dee2e6;
+        font-weight: normal;
+        font-size: .7rem;
+        /*white-space: nowrap;*/
+    }
+
+    
+.table th {
+    padding: .25rem !important;
+    background-color: #d3d3d333;
+    vertical-align: middle;
+    font-size: 12px;
+    border-top: 1px solid #dee2e6;
+    text-align: center !important;
+}
+
+/** Configuracion Botodes modal **/
+.botonModal {
+    border: none !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
+}
+
+.botonModal:hover {
+    box-shadow:  10px 0 #666;
+  transform: translateY(-4px);
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid lightgray;
+}
+
+
+ 
