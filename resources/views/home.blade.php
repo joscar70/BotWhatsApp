@@ -17,7 +17,7 @@
                     {{-- @if ( auth()->user()->rol=='ADMIN' ) --}}
                     
                         @include('layouts.ModulosApp.header')
-                        @include('layouts.ModulosApp.sidebar')
+                        @include('layouts.ModulosApp.sideBar')
                         @yield('content')
                         
                        
