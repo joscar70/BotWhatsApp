@@ -21,3 +21,6 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+public/input_requests.log
+public/input_requestsJson.log
+public/input_sql.log

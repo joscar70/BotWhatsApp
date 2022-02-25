@@ -51,7 +51,8 @@ class UsuariosCtr extends Controller
     }
 
     public static function getToken(Request $request){
-       $token = DB::select("SELECT a.tokeRecibido FROM tokenrecibidos a WHERE a.fechaExp > CURRENT_TIMESTAMP() and a.url = ?"[$request->url]);
+        $sql = "SELECT a.tokeRecibido FROM tokenrecibidos a WHERE a.fechaExp > CURRENT_TIMESTAMP() and a.url ='".$request->url."'";
+       $token = DB::select($sql);
         if (count($token) == 0) {
             $datoJson = json_encode(array(
                 "username" => "botwhatsapp",

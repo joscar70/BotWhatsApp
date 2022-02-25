@@ -14,7 +14,6 @@ class ApiGeneproCtr extends Controller
             "estado"  => $request->estado ,
         ));
        
-        //echo '<pre>'; print_r($datoJson); echo '</pre>';
        
         $token = UsuariosCtr::getToken($request);
         if (isset($token->resultado)) {

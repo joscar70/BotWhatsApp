@@ -9,6 +9,7 @@ use App\Models\MensajesWhatsApp;
 class SendRespuestaCtr extends Controller
 {
     public function sendRespustaApiChat(Request $request, $datoJson, $confiAuth){
+        echo '<pre>'; print_r($datoJson); echo '</pre>';
         
        $response = json_decode(CustomLibCtr::doCurl($request->url.'/api/auth/confirmarAnular', 'POST', $datoJson, $confiAuth));
        echo '<pre>'; print_r($response); echo '</pre>';
